@@ -1,0 +1,7 @@
+name: ls
+runtime: go
+description: Deploy ec2 restapi
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-go

@@ -1,0 +1,106 @@
+Absolutely, here are all the Postman requests in one response:
+
+GET all drivers
+Method: GET
+URL: http://localhost:5000/api/drivers
+GET a specific driver
+Method: GET
+URL: http://localhost:5000/api/drivers/{driver_id}
+Add a new driver
+Method: POST
+URL: http://localhost:5000/api/drivers
+Body (raw, JSON):
+JSON
+
+{
+    "id": 4,
+    "name": "Max Verstappen",
+    "wins": 20,
+    "poles": 18
+}
+
+Update a driver (increment wins and poles)
+Method: PATCH
+URL: http://localhost:5000/api/drivers/{driver_id}
+Body (raw, JSON):
+JSON
+
+{
+    "wins": 1,
+    "poles": 1
+}
+
+Delete a driver
+Method: DELETE
+URL: http://localhost:5000/api/drivers/{driver_id}
+
+Formula 1 Drivers API Documentation
+This API allows you to manage a list of Formula 1 drivers, including their wins and pole positions.
+
+Base URL
+All URLs referenced in the documentation have the following base:
+
+http://localhost:5000/api/drivers
+
+Endpoints
+GET /api/drivers
+Returns a list of all drivers.
+
+Example Request:
+
+GET /api/drivers
+
+GET /api/drivers/{driver_id}
+Returns a specific driver by ID.
+
+Example Request:
+
+GET /api/drivers/1
+
+POST /api/drivers
+Adds a new driver. The request body should include id, name, wins, and poles.
+
+Example Request:
+
+POST /api/drivers
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Max Verstappen",
+    "wins": 20,
+    "poles": 18
+}
+
+PATCH /api/drivers/{driver_id}
+Updates a driver’s wins and poles. The request body should include the number of wins and/or poles to increment.
+
+Example Request:
+
+PATCH /api/drivers/1
+Content-Type: application/json
+
+{
+    "wins": 1,
+    "poles": 1
+}
+
+DELETE /api/drivers/{driver_id}
+Deletes a driver by ID.
+
+Example Request:
+
+DELETE /api/drivers/1
+
+Please replace {driver_id} with the actual ID of the driver you want to get, update, or delete. Also, make sure your Flask app is running on localhost port 5000. If it’s running on a different host or port, please adjust the URLs accordingly.
+
+Status Codes
+The API returns the following status codes:
+
+200: Success
+201: Created
+404: Not Found
+I hope this helps! 😊
+
+
+
